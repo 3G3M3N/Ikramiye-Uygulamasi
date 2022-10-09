@@ -11,11 +11,11 @@ let tahminonlar = tahmin / 10
 let tahmin_birler = tahmin % 10 
 
 if (tahmin == sayı){
-    console.log("Tebrikler 10.000 TL kazandınız...")
+    console.log("Tebrikler 10.000 TL kazandınız. Cevap" +  ` ${sayı} ` + "idi")
 }else if (tahminonlar == sayı_onlar || tahmin_birler == sayı_birler){
-    console.log("Tebrikler 5000 TL kazandınız...")
+    console.log("Tebrikler 5000 TL kazandınız. Cevap" +  ` ${sayı} ` + "idi")
 }else if(tahminonlar == sayı_birler || tahmin_birler == sayı_onlar){
-    console.log("Tebrikler 1000 TL kazandınız...")
+    console.log("Tebrikler 1000 TL kazandınız. Cevap" +  ` ${sayı} ` + "idi")
 }else{
-    console.log("Maalesef bir şey kazanamadınız, cevap " +  `${sayı}`  + " idi...")
+    console.log("Maalesef bir şey kazanamadınız, cevap " +  ` ${sayı}`  + " idi...")
 }
