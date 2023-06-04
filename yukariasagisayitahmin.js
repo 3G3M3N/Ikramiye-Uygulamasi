@@ -1,17 +1,22 @@
-let sayı = Math.floor((Math.random()*100))
-console.log(sayı)
-let tahmin = parseInt(prompt("0-100'e Sayı Tahmin Ediniz"))
+const sayı = Math.floor(Math.random()*100)
 let hak = 4
-while (hak>=0) {
-    if (tahmin==sayı) {
-        console.log("Tebrikler Doğru Yanıt.")
-    } else if (tahmin>sayı) {
-        tahmin = parseInt(prompt("İn innn"))
-    }else if (tahmin<sayı) {
-        tahmin = parseInt(prompt("Çık çıkkkk"))
+let tahmin = parseInt(prompt("Tahmininiz:"))
+function sayıtahmin() {
+    while (hak>0) {
+         if (tahmin==sayı) {
+            console.log("Doğru Yanıt")
+        } else if (tahmin<sayı) {
+            console.log("Daha Yukarı")
+            tahmin = parseInt(prompt("Tahmininiz:"))
+            
+        }else if (tahmin>sayı) {
+            console.log("Daha Aşağı")
+            tahmin = parseInt(prompt("Tahmininiz:"))
+        }
+        if (hak==1){
+            console.log("Kaybettiniz sayı",sayı,"idi")
+        }
+            hak -= 1
     }
-    hak -= 1
 }
-if (hak=0) {
-    console.log("Maalesef Kaybettiniz, Sayı",sayı,"idi")
-}
+sayıtahmin()
